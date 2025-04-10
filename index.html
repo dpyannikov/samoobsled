@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Система оценки качества образования</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>📊 Система внутренней оценки качества образования</h1>
+        <nav>
+            <a href="create-poll.html">Создать опрос</a>
+            <a href="analytics.html">Аналитика</a>
+        </nav>
+    </header>
 
+    <main>
+        <h2>Активные опросы:</h2>
+        <!-- Замените раздел с опросами на: -->
+<div id="pollsList" class="polls-container">
+    <!-- Опросы будут подгружаться здесь через JS -->
+</div>
+
+<!-- Добавьте этот скрипт перед закрывающим </body>: -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const polls = JSON.parse(localStorage.getItem('polls')) || [];
+        const container = document.getElementById('pollsList');
+        
+        if (polls.length === 0) {
+            container.innerHTML = '<p class="no-polls">Нет активных опросов. Создайте первый!</p>';
+        }
+    });
+</script>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
