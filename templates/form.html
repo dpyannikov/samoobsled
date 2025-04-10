@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генерация PDF</title>
+</head>
+<body>
+    <h1>Форма для генерации PDF</h1>
+    <form method="post" action="/generate">
+        <label>Имя: <input type="text" name="name" required></label><br><br>
+        <label>Email: <input type="email" name="email" required></label><br><br>
+        <label>Сообщение:<br><textarea name="message" rows="5" cols="30" required></textarea></label><br><br>
+        <button type="submit">Сгенерировать PDF</button>
+    </form>
+</body>
+</html>
